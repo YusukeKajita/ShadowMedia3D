@@ -1,0 +1,482 @@
+﻿<Window x:Class="ShadowKinectSensor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tools="clr-namespace:_3DTools;assembly=3DTools"
+        Title="MainWindow" Height="534" Width="893" BorderBrush="Black" Background="Black" Foreground="White" ResizeMode="NoResize" BorderThickness="5" WindowStyle="None" AllowsTransparency="True" Opacity="0.85" MouseDoubleClick="Window_MouseDoubleClick">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="sphere.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF610404" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Grid.Column="1">
+            <Button Content=" × " Template="{StaticResource WindowButtonTemplate}" Click="CloseButton_Click" ToolTip="正常終了します"/>
+            <Button Content=" ＿ " Template="{StaticResource WindowButtonTemplate}" Click="Button_Smoll_Click" ToolTip="最小化します"/>
+        </StackPanel>
+        <GroupBox Header="操作" Grid.Row="1" Margin="5">
+            <TabControl>
+                <TabItem Header="設定">
+                    <Grid>
+                        <WrapPanel Orientation="Horizontal">
+                            <GroupBox Header="送信データ型選択" Margin="5">
+                                <WrapPanel Orientation="Vertical">
+                                    <RadioButton x:Name="DepthDataButton" Content="DepthData" Checked="DepthDataButtonChecked" ToolTip="送信先：CIPC 受信先：Kinect"/>
+                                    <RadioButton x:Name="SkeletonDataButton" Content="SkeletonData" Checked="SkeletonDataButtonChecked" ToolTip="送信先：CIPC 受信先：Kinect"/>
+                                    <RadioButton x:Name="OptitrackButton" Content="OptiTtrack" Checked="OptitrackDataButtonChecked" ToolTip="送信先：CIPC 受信先：Opti"/>
+                                    <RadioButton x:Name="RadioButton_ShadowKinectSensorTerminal" Content="ShadowKinectSensorTerminal" Checked="RadioButton_ShadowKinectSensorTerminal_Checked" ToolTip="送信先：SKST 受信先：Kinect"/>
+                                </WrapPanel>
+                            </GroupBox>
+                            <TextBlock Text="{Binding}" x:Name="TextBlock_State"/>
+
+                        </WrapPanel>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="受信先">
+                    <Grid>
+                        <WrapPanel>
+                            <GroupBox Margin="5" x:Name="GroupBox_ReceiveFrom_CIPCServer">
+                                <GroupBox.Header>
+                                    <RadioButton Content="CIPCServer" GroupName="ReceiveFrom"/>
+                                </GroupBox.Header>
+                                <StackPanel>
+                                    <GroupBox Header="RemoteIP">
+                                        <TextBox x:Name="TextBox_remoteIP" Text="127.0.0.1"/>
+                                    </GroupBox>
+                                    <GroupBox Header="RemotePort">
+                                        <TextBox x:Name="TextBox_remotePort" Text="12000" VerticalAlignment="Top"/>
+                                    </GroupBox>
+                                    <GroupBox Header="myPort">
+                                        <TextBox x:Name="TextBox_myPort" TextWrapping="Wrap" Text="4001"/>
+                                    </GroupBox>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="CIPC_lunchbutton_Receive" Margin="5" Content="CIPC接続" Click="CIPC_lunchbutton_Click"/>
+                                        <Button x:Name="CIPC_closebutton_Receive" Margin="5" Content="CIPC切断" IsEnabled="False" Click="CIPC_closebutton_Click"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Margin="5" x:Name="GroupBox_ReceiveFrom_Kinect">
+                                <GroupBox.Header>
+                                    <RadioButton x:Name="RadioButton_ReceiveFrom_Kinect" Content="Kinect" GroupName="ReceiveFrom" Checked="RadioButton_ReceiveFrom_Kinect_Checked" IsChecked="True"/>
+                                </GroupBox.Header>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="index : "/>
+                                        <TextBox Text="0" x:Name="TextBox_Kinect_index"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="KinectLunchButton" Content=" 　起動　 " Margin="5" Click="KinectLunchButton_Click"/>
+                                        <Button x:Name="KinectStopButton" Content=" 　終了　 " Margin="5" Click="KinectStopButton_Click" IsEnabled="False"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="TextBlock_KinectStatus" TextWrapping="Wrap" Text="状態："/>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Margin="5" x:Name="GroupBox_ReceiveFrom_Optitrack">
+                                <GroupBox.Header>
+                                    <RadioButton x:Name="RadioButton_ReceiveFrom_Optitrack" Content="Optitrack" GroupName="ReceiveFrom"/>
+                                </GroupBox.Header>
+                                <StackPanel HorizontalAlignment="Left">
+                                    <GroupBox Header="ServerAddress">
+                                        <TextBox x:Name="opt_ServerAddress" TextWrapping="Wrap" Text="127.0.0.1"/>
+                                    </GroupBox>
+
+                                    <GroupBox Header="localAddress">
+                                        <TextBox x:Name="opt_localAdress" Text="127.0.0.1" />
+                                    </GroupBox>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="OptReceiveButton" Content=" 受信開始 " Margin="5" Click="OptReceiveButtonClick" />
+                                        <Button x:Name="OptCloseReceiveButton" Content=" 受信終了 " Margin="5" Click="OptCloseReceiveButtonClick" IsEnabled="False"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="OptStatus" TextWrapping="Wrap" Text="状態："/>
+                                </StackPanel>
+                            </GroupBox>
+
+                        </WrapPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="送信先">
+                    <WrapPanel>
+                        <GroupBox x:Name="GroupBox_Sendto_CIPCServer">
+                            <GroupBox.Header>
+                                <TextBlock Text="CIPCServer"/>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <GroupBox Header="RemoteIP">
+                                    <TextBox x:Name="tbx_remoteIP" Text="127.0.0.1"/>
+                                </GroupBox>
+                                <GroupBox Header="RemotePort">
+                                    <TextBox x:Name="tbx_remotePort" Text="12000" VerticalAlignment="Top"/>
+                                </GroupBox>
+                                <GroupBox Header="myPort">
+                                    <TextBox x:Name="tbx_myPort" TextWrapping="Wrap" Text="4050"/>
+                                </GroupBox>
+                                <GroupBox Header="SendFPS" ToolTip="目標値　目安">
+                                    <TextBox x:Name="tbx_fps" TextWrapping="Wrap" Text="30"/>
+                                </GroupBox>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="CIPC_lunchbutton" Content="CIPC接続" Margin="5" Click="CIPC_lunchbutton_Click"/>
+                                    <Button x:Name="CIPC_closebutton" Content="CIPC切断" Margin="5" IsEnabled="False" Click="CIPC_closebutton_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox x:Name="GroupBox_Sendto_SKST">
+                            <GroupBox.Header>
+                                <TextBlock Text="ShadowKinectSensorTerminal"/>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <GroupBox Header="RemoteIP">
+                                    <TextBox x:Name="TextBox_SKST_remoteIP" Text="127.0.0.1"/>
+                                </GroupBox>
+                                <StackPanel Orientation="Horizontal">
+                                    <GroupBox Header="UDP接続">
+                                        <StackPanel>
+                                            <GroupBox Header="RemotePort">
+                                                <TextBox x:Name="TextBox_SKST_remotePort" Text="4020"/>
+                                            </GroupBox>
+
+                                            <GroupBox Header="BindPort">
+                                                <TextBox x:Name="TextBox_SKST_BindPort" Text="4051"/>
+                                            </GroupBox>
+                                        </StackPanel>
+                                    </GroupBox>
+                                    <GroupBox Header="TCP接続">
+                                        <StackPanel>
+                                            <GroupBox Header="RemotePort">
+                                                <TextBox x:Name="TextBox_SKST_TCP_remotePort" Text="14020"/>
+                                            </GroupBox>
+                                        </StackPanel>
+                                    </GroupBox>
+                                </StackPanel>
+                                <GroupBox Header="SendFPS" ToolTip="目標値　目安">
+                                    <TextBox x:Name="tbx_SKST_fps" TextWrapping="Wrap" Text="30"/>
+                                </GroupBox>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="Button_Sendto_SKST_Start" Content=" 接　続 " Margin="5" Click="Button_Sendto_SKST_Start_Click"/>
+                                    <Button x:Name="Button_Sendto_SKST_Stop" Content=" 切　断 " Margin="5" IsEnabled="False" Click="Button_Sendto_SKST_Stop_Click"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </GroupBox>
+                    </WrapPanel>
+                </TabItem>
+
+            </TabControl>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Grid.Column="1" Margin="5" Header="表示">
+            <TabControl x:Name="TabControl_View" >
+                <TabItem Header="標準">
+                    <WrapPanel Grid.Row="1" Grid.Column="1">
+                        <GroupBox Header="深度">
+                            <Grid Width="160" Height="120">
+                                <Image x:Name="DepthImageBox"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="カラー">
+                            <Grid Width="160" Height="120">
+                                <Image x:Name="ColorImageBox"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="ボーン　&amp;　影画像" Grid.Row="1">
+                            <Grid Width="160" Height="120">
+                                <Image x:Name="PlayerShadowBox"/>
+                                <Grid x:Name="SkeltonGrid" Width="{Binding ElementName=PlayerShadowBox, Path=Width}" Height="{Binding ElementName=PlayerShadowBox, Path=Height}"/>
+
+                            </Grid>
+                        </GroupBox>
+                    </WrapPanel>
+                </TabItem>
+                <TabItem Header="三次元">
+                    <WrapPanel>
+                        <TabControl x:Name="TabControl_Modelview">
+                            <TabItem Header="取得モデル">
+                                <GroupBox Header="3DView1">
+                                    <Grid Width="320" Height="240">
+                                        <Viewport3D x:Name="Viewport3D_1">
+                                            <Viewport3D.Camera>
+                                                <PerspectiveCamera x:Name="Camera_1" Position="0,0,-5" UpDirection="0,1,0" LookDirection="0,0,-1"/>
+                                            </Viewport3D.Camera>
+                                            <Viewport3D.Children>
+                                                <ModelVisual3D>
+                                                    <ModelVisual3D.Content>
+                                                        <DirectionalLight Color="White" Direction="0,-0.5,1" />
+                                                    </ModelVisual3D.Content>
+                                                </ModelVisual3D>
+                                            </Viewport3D.Children>
+                                        </Viewport3D>
+                                    </Grid>
+                                </GroupBox>
+                            </TabItem>
+                            <TabItem Header="3Dモデル">
+                                <GroupBox Header="3DView2">
+                                    <Grid Width="320" Height="240">
+                                        <Viewport3D x:Name="Viewport3D_2">
+                                            <Viewport3D.Camera>
+                                                <PerspectiveCamera x:Name="Camera_2" Position="0,0,-5" UpDirection="0,1,0" LookDirection="0,0,-1"/>
+                                            </Viewport3D.Camera>
+                                            <Viewport3D.Children>
+                                                <ModelVisual3D>
+                                                    <ModelVisual3D.Content>
+                                                        <DirectionalLight Color="White" Direction="0,-0.5,1" />
+                                                    </ModelVisual3D.Content>
+                                                </ModelVisual3D>
+                                            </Viewport3D.Children>
+                                        </Viewport3D>
+                                    </Grid>
+                                </GroupBox>
+                            </TabItem>
+                            <TabItem Header="送信">
+                                <WrapPanel Width="320" Height="240">
+                                    <GroupBox Header="ShadowKinectSensorTerminal">
+                                        <StackPanel>
+                                            <GroupBox Header="remoteIP">
+                                                <TextBlock Text="{Binding ElementName=TextBox_SKST_remoteIP,Path=Text}"/>
+                                            </GroupBox>
+                                            <GroupBox Header="remotePort">
+                                                <TextBlock Text="{Binding ElementName=TextBox_SKST_TCP_remotePort,Path=Text}"/>
+                                            </GroupBox>
+                                            <Button Content="　送　信　" IsEnabled="{Binding ElementName=RadioButton_ShadowKinectSensorTerminal,Path=IsChecked}"/>
+                                        </StackPanel>
+                                    </GroupBox>
+                                </WrapPanel>
+                            </TabItem>
+                        </TabControl>
+                        <GroupBox Header="3Dmodel取得" Width="100">
+                            <StackPanel>
+                                <Button Content="取得" Click="Button_3Dmodel_Click"/>
+
+                                <StackPanel>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Z Max : "/>
+                                            <TextBlock Text="{Binding ElementName=Slider_Cube_Zmax,Path=Value}"/>
+                                        </StackPanel>
+                                        <Slider x:Name="Slider_Cube_Zmax" Value="4" Minimum="0" Maximum="10" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Z Min : "/>
+                                            <TextBlock Text="{Binding ElementName=Slider_Cube_Zmin,Path=Value}"/>
+                                        </StackPanel>
+                                        <Slider x:Name="Slider_Cube_Zmin" Value="3" Minimum="0" Maximum="10" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="X Max : "/>
+                                            <TextBlock Text="{Binding ElementName=Slider_Cube_Xmax,Path=Value}"/>
+                                        </StackPanel>
+                                        <Slider x:Name="Slider_Cube_Xmax" Value="1.5" Minimum="0" Maximum="5" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="X Min : "/>
+                                            <TextBlock Text="{Binding ElementName=Slider_Cube_Xmin,Path=Value}"/>
+                                        </StackPanel>
+                                        <Slider x:Name="Slider_Cube_Xmin" Value="-1.5" Minimum="-5" Maximum="0" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Y Max : "/>
+                                            <TextBlock Text="{Binding ElementName=Slider_Cube_Ymax,Path=Value}"/>
+                                        </StackPanel>
+                                        <Slider x:Name="Slider_Cube_Ymax" Value="1" Minimum="0" Maximum="3" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Y Min : "/>
+                                            <TextBlock Text="{Binding ElementName=Slider_Cube_Ymin,Path=Value}"/>
+                                        </StackPanel>
+                                        <Slider x:Name="Slider_Cube_Ymin" Value="-1" Minimum="-3" Maximum="0" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </GroupBox>
+                        <StackPanel>
+                            <GroupBox Header="処理操作">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock  Text="処理率" />
+                                        <Slider x:Name="Slider_Frame" Width="150" Minimum="1" Value="2" IsSnapToTickEnabled="True" LargeChange="5" SmallChange="1" AutoToolTipPlacement="TopLeft"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock  Text="解像度" />
+                                        <Slider x:Name="Slider_DPI" Width="150" Minimum="5" Maximum="25" Value="10" IsSnapToTickEnabled="True" LargeChange="5" SmallChange="5" AutoToolTipPlacement="TopLeft" TickFrequency="1"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="3Dモデル保存">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                                        <TextBox x:Name="TextBox_Filename" Width="100"/>
+                                        <Button Content=" 選  択 " Margin="0,0,10,0" x:Name="Button_3Dmodel_Choise_Filename" Click="Button_3Dmodel_Choise_Filename_Click"/>
+                                        <Button Content=" 保  存 " x:Name="Button_3Dmodel_Save" Click="Button_3Dmodel_Save_Click"/>
+                                    </StackPanel>
+
+                                </StackPanel>
+                            </GroupBox>
+                        </StackPanel>
+                        <GroupBox Header="視点操作">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock  Text="ＸＺ距離" />
+                                    <Slider x:Name="Slider_Length" Width="150" Maximum="20" Minimum="1" Value="10" ValueChanged="Slider_Model_ValueChanged" IsSnapToTickEnabled="True" TickFrequency="0.1" AutoToolTipPlacement="BottomRight"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock  Text="Ｙ軸回転" />
+                                    <Slider x:Name="Slider_Rotate" AutoToolTipPlacement="BottomRight" Width="150" Maximum="360" Minimum="0" Value="270" ValueChanged="Slider_Model_ValueChanged" IsSnapToTickEnabled="True" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock  Text="Ｙ軸高さ" />
+                                    <Slider x:Name="Slider_Height" AutoToolTipPlacement="BottomRight" Width="150" Maximum="20" Minimum="-20" Value="0" ValueChanged="Slider_Model_ValueChanged" IsSnapToTickEnabled="True" TickFrequency="0.5"  />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock  Text="視中心Ｘ" />
+                                    <Slider x:Name="Slider_X" AutoToolTipPlacement="BottomRight" Width="150" Maximum="20" Minimum="-20" Value="0" ValueChanged="Slider_Model_ValueChanged" IsSnapToTickEnabled="True" TickFrequency="0.5"  />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock  Text="視中心Ｚ" />
+                                    <Slider x:Name="Slider_Z" AutoToolTipPlacement="BottomRight" Width="150" Maximum="20" Minimum="-20" Value="5" ValueChanged="Slider_Model_ValueChanged" IsSnapToTickEnabled="True" TickFrequency="0.5"  />
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </WrapPanel>
+                </TabItem>
+                <TabItem Header="キャリブレーション">
+                    <WrapPanel>
+                        <GroupBox Header="情報" Width="200">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="相対位置X : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_X"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="相対位置Y : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Y"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="相対位置Z : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Z"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="回転角度x : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_rx"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="回転角度y : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_ry"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="回転角度z : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_rz"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="原点までの距離 : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_D"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Slot1">
+                            <StackPanel>
+                                <Button Content="保存" x:Name="Button_Callib_Save1" Click="Button_Callib_Save1_Click"/>
+                                <Button Content="読込" x:Name="Button_Callib_Load1" Click="Button_Callib_Load1_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Slot2">
+                            <StackPanel>
+                                <Button Content="保存" x:Name="Button_Callib_Save2" Click="Button_Callib_Save2_Click"/>
+                                <Button Content="読込" x:Name="Button_Callib_Load2" Click="Button_Callib_Load2_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Slot3">
+                            <StackPanel>
+                                <Button Content="保存" x:Name="Button_Callib_Save3" Click="Button_Callib_Save3_Click"/>
+                                <Button Content="読込" x:Name="Button_Callib_Load3" Click="Button_Callib_Load3_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="検査" Width="300">
+                            <StackPanel>
+                                <TextBlock Text="燈火位置"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="相対x : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Test_x_re"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="相対y : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Test_y_re"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="相対z : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Test_z_re"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="絶対x : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Test_x_ab"/>
+                                    <TextBlock Text="絶対y : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Test_y_ab"/>
+                                    <TextBlock Text="絶対z : "/>
+                                    <TextBlock x:Name="TextBlock_Callib_Test_z_ab"/>
+                                </StackPanel>
+                                <Button Content="検  査" x:Name="Button_Callib_test" Click="Button_Callib_test_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="試験キャリブレーション" Width="200">
+                            <StackPanel>
+                                <Button Content="Zero" x:Name="Button_Callib_Zero" Click="Button_Callib_Zero_Click"/>
+                                <Button Content="X" x:Name="Button_Callib_X" Click="Button_Callib_X_Click"/>
+                                <Button Content="Z" x:Name="Button_Callib_Z" Click="Button_Callib_Z_Click"/>
+                                <Button Content="計算" x:Name="Button_Callib_Calc" Click="Button_Callib_Calc_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </WrapPanel>
+                </TabItem>
+                <TabItem Header="前後判定">
+                    <WrapPanel>
+                        <GroupBox Header="現在の向き">
+                            <Grid Height="120" Width="160">
+                                <Rectangle x:Name="Rectangle_Judge_Allow" Margin="70,20,70,20" RenderTransformOrigin="0.5,0.5" StrokeThickness="3" RadiusX="3" RadiusY="3" Stroke="Black" StrokeDashOffset="-4">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="White"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                            <GradientStop Color="Red" Offset="0.513"/>
+                                            <GradientStop Color="#FF5443FF" Offset="0.504"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="更新">
+                            <Grid Height="120" Width="160">
+                                <TextBlock x:Name="TextBlock_Judge_Update" FontSize="72"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="向き">
+                            <Grid Height="120" Width="160">
+                                <TextBlock x:Name="TextBlock_Judge_Direction" FontSize="72"/>
+                                <Button Content="今前向いています" x:Name="Button_Judge_LookFront" Click="Button_Judge_LookFront_Click"/>
+                            </Grid>
+                        </GroupBox>
+                    </WrapPanel>
+                </TabItem>
+            </TabControl>
+        </GroupBox>
+        <TextBlock x:Name="Title_TextBlock" TextWrapping="Wrap" Grid.ColumnSpan="2" IsHitTestVisible="False"/>
+    </Grid>
+</Window>

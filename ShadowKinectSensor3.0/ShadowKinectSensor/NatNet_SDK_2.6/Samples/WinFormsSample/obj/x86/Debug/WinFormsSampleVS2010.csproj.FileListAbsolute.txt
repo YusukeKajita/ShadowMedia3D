@@ -1,0 +1,9 @@
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\bin\WinFormTestApp.exe.config
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\bin\WinFormTestApp.exe
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\bin\WinFormTestApp.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\WinFormsSample\obj\x86\Debug\WinFormsSampleVS2010.csprojResolveAssemblyReference.cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\WinFormsSample\obj\x86\Debug\WinFormTestApp.Form1.resources
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\WinFormsSample\obj\x86\Debug\WinFormTestApp.Properties.Resources.resources
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\WinFormsSample\obj\x86\Debug\WinFormsSampleVS2010.csproj.GenerateResource.Cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\WinFormsSample\obj\x86\Debug\WinFormTestApp.exe
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor2\ShadowKinectSensor\NatNet_SDK_2.6\Samples\WinFormsSample\obj\x86\Debug\WinFormTestApp.pdb

@@ -1,0 +1,119 @@
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe.config
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.pdb
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csprojResolveAssemblyReference.cache
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\DepthImage.baml
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainWindow.baml
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\DepthImage.g.cs
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainWindow.g.cs
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\App.g.cs
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor_MarkupCompile.cache
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.g.resources
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.Properties.Resources.resources
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csproj.GenerateResource.Cache
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.exe
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.pdb
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainPage.baml
+c:\users\kajita\documents\visual studio 2013\Projects\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainPage.g.cs
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe.config
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.exe
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.pdb
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.pdb
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csprojResolveAssemblyReference.cache
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\DepthImage.baml
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainPage.baml
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainWindow.baml
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\DepthImage.g.cs
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainPage.g.cs
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainWindow.g.cs
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\App.g.cs
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor_MarkupCompile.cache
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.g.resources
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.Properties.Resources.resources
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csproj.GenerateResource.Cache
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\CIPC_CS.dll
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.dll
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.dll
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.dll
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\CIPC_CS.pdb
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.pdb
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.pdb
+C:\Users\yozora\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe.config
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.exe
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\CIPC_CS.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\CIPC_CS.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csprojResolveAssemblyReference.cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainPage.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainWindow.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainPage.g.cs
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\MainWindow.g.cs
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\App.g.cs
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor_MarkupCompile.cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.g.resources
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.Properties.Resources.resources
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csproj.GenerateResource.Cache
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe.config
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.exe
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.pdb
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.exe
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\ShadowKinectSensor.pdb
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\NatNetML.dll
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\CIPC_CS.pdb
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.pdb
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.pdb
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.pdb
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csprojResolveAssemblyReference.cache
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\MainWindow.baml
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\MainWindow.g.cs
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\App.g.cs
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor_MarkupCompile.cache
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.g.resources
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.Properties.Resources.resources
+C:\Users\ShdowSuond\Documents\takuto\ShadowKinectSensor2\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csproj.GenerateResource.Cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\ShadowKinectSensor3.0.exe.config
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\ShadowKinectSensor3.0.exe.manifest
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\ShadowKinectSensor3.0.application
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\ShadowKinectSensor3.0.exe
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\ShadowKinectSensor3.0.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\3DTools.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\CIPC_CS.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\FPSAdjuster.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\NatNetML.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.dll
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\3DTools.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\CIPC_CS.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\FPSAdjuster.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\UDP_LIVESTREAMING.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CLIANT.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\bin\Debug\UDP_PACKETS_CODER.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csprojResolveAssemblyReference.cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\MainWindow.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\App.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\MainWindow.g.cs
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\App.g.cs
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0_MarkupCompile.cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0.g.resources
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.Properties.Resources.resources
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor.csproj.GenerateResource.Cache
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0.TrustInfo.xml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0.exe.manifest
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0.application
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0.exe
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\ShadowKinectSensor3.0.pdb
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\cone.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\cube.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\cylinder.baml
+C:\Users\KAJITA\Dropbox\ShadowKinectSensor3.0\ShadowKinectSensor\obj\Debug\sphere.baml
