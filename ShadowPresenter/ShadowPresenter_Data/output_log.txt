@@ -1,0 +1,47 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 Ti OEM (ID=0x1189)
+    Vendor:   NVIDIA
+    VRAM:     1985 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\CIPC_CS_Unity.dll (this message is harmless)
+Loading C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\CIPC_CS_Unity.dll into Unity Child Domain
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UDP_PACKETS_CLIANT_Unity.dll (this message is harmless)
+Loading C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UDP_PACKETS_CLIANT_Unity.dll into Unity Child Domain
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UDP_PACKETS_CODER_Unity.dll (this message is harmless)
+Loading C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\UDP_PACKETS_CODER_Unity.dll into Unity Child Domain
+- Completed reload, in  0.763 seconds
+desktop: 1600x900 60Hz; virtual: 2880x1024 at -1280,0
+<RI> Initializing input.
+XInput1_3.dll not found.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\ShadowGroup\Dropbox\ShadowPresenter\ShadowPresenter_Data\Managed\System.dll (this message is harmless)
+SocketException: 既存の接続はリモート ホストに強制的に切断されました。
+
+  at System.Net.Sockets.Socket.ReceiveFrom_nochecks_exc (System.Byte[] buf, Int32 offset, Int32 size, SocketFlags flags, System.Net.EndPoint& remote_end, Boolean throwOnError, System.Int32& error) [0x00088] in /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/System/System.Net.Sockets/Socket.cs:2669 
+  at System.Net.Sockets.Socket.ReceiveFrom_nochecks (System.Byte[] buf, Int32 offset, Int32 size, SocketFlags flags, System.Net.EndPoint& remote_end) [0x00000] in /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/System/System.Net.Sockets/Socket.cs:2649 
+  at System.Net.Sockets.Socket.ReceiveFrom (System.Byte[] buffer, System.Net.EndPoint& remoteEP) [0x0004a] in /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/System/System.Net.Sockets/Socket.cs:2580 
+  at System.Net.Sockets.UdpClient.Receive (System.Net.IPEndPoint& remoteEP) [0x0001d] in /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/System/System.Net.Sockets/UdpClient.cs:332 
+  at UDP_PACKETS_CLIANT.UDP_PACKETS_CLIANT.Recieve () [0x00000] in <filename unknown>:0 
+ 
+(Filename: /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/System/System.Net.Sockets/Socket.cs Line: 2669)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4f48 -> priority: 1 
+  Thread -> id: 27e4 -> priority: 1 
+NullReferenceException: Object reference not set to an instance of an object
+  at script_CIPC_For_Unity.CIPC_Close () [0x00007] in C:\Users\ShadowGroup\Dropbox\ShadowPresenter\Assets\script_CIPC_For_Unity.cs:83 
+  at script_CIPC_For_Unity.OnApplicationQuit () [0x00000] in C:\Users\ShadowGroup\Dropbox\ShadowPresenter\Assets\script_CIPC_For_Unity.cs:77 
+ 
+(Filename: C:/Users/ShadowGroup/Dropbox/ShadowPresenter/Assets/script_CIPC_For_Unity.cs Line: 83)
+
